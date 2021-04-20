@@ -1,0 +1,59 @@
+
+<title>{{ title }}</title>
+<meta property="og:url" content="{{ url }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta property="og:image" content="{{ url }}/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="twitter:creator" content="@donniedamato" />
+<meta property="twitter:creator:id" content="230538553" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta content="chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="{{ description }}">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#000000">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+<link rel="alternate" href="{{ url }}" hreflang="en-us" />
+
+<link href="{{ fontPreload }}" rel="preload" as="style">
+<link href="{{ fontPreload }}" rel="stylesheet" media="print" onload="this.media='all'">
+
+<link href="styles.css" rel="preload" as="style">
+<link href="styles.css" rel="stylesheet" media="print" onload="this.media='all'">
+
+<noscript>
+  <link rel="stylesheet" href="{{ fontPreload }}">
+  <link rel="stylesheet" href="styles.css">
+</noscript>
+
+<script type="text/javascript" defer>
+  window.onload = () => 'serviceWorker' in navigator && navigator.serviceWorker.register('sw.js').then((registration) => registration.update()).catch((err) => {});
+</script>
+
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54428903-2"></script>
+<script>
+  if (window.location.hostname === new URL('{{ url }}').hostname) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-54428903-2', {'transport_type': 'beacon'});
+  }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "schema.org",
+  "@type": "WebPage",
+  "name": "{{ title }}",
+  "description": "{{ description }}",
+  "url": "{{ url }}"
+}
+</script>

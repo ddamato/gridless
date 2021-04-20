@@ -1,0 +1,41 @@
+{
+  "name": "gridless",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "gridless": "compile.js"
+  },
+  "scripts": {
+    "dev": "rm -rf _site && npm run compile && npm run copy",
+    "build": "npm run dev && npm run minify",
+    "compile": "node ./bin/compile.js",
+    "copy": "mkdir -p _site && cp -r root/. _site",
+    "minify": "npm run minify:resources && npm run minify:content && npm run minify:images",
+    "minify:images": "imagemin root/images/*.jpg --plugin=mozjpeg --out-dir=_site/images",
+    "minify:resources": "ls-minifier --input=./_site --js-compressor=terser --css-compressor=clean-css --override",
+    "minify:content": "html-minifier --conservative-collapse --minify-css --minify-js --remove-comments --output-dir _site --input-dir _site --file-ext=html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddamato/gridless.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddamato/gridless/issues"
+  },
+  "homepage": "https://github.com/ddamato/gridless#readme",
+  "devDependencies": {
+    "front-matter": "^4.0.2",
+    "fs-extra": "^9.0.1",
+    "glob-fs": "^0.1.7",
+    "html-minifier": "^4.0.0",
+    "imagemin": "^7.0.1",
+    "imagemin-cli": "^6.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "ls-minifier": "^2.1.0",
+    "markdown-it": "^11.0.0",
+    "markdown-it-link-attributes": "^3.0.0",
+    "nunjucks": "^3.2.2"
+  }
+}
