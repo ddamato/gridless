@@ -4,7 +4,13 @@
     {% include "head.njk" %}
   </head>
   <body>
-    <main class="main">
+    <header class="max-width">
+      <div class="logo heading">
+        <span>get rid</span>
+        <span style="text-indent: .6em;">of <s>grid</s></span>
+      </div>
+    </header>
+    <main class="main max-width">
       {{ content | safe }}
     </main>
   </body>

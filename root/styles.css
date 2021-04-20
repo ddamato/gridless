@@ -4,8 +4,29 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background: #000a29;
+  line-height: 1.5;
+  color: #fff;
+  --accent-color: #e2439a; /* https://share.getcloudapp.com/9ZuxRAym */
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Epilogue', sans-serif;
+  line-height: 1.25;
+}
+
+.max-width {
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+.logo {
+  display: inline-flex;
+  font-family: 'Epilogue', sans-serif;
+  line-height: 1;
+  flex-direction: column;
+  font-size: 15vmin;
+  margin: 2rem 0;
+  text-shadow: .05em .05em var(--accent-color);
 }

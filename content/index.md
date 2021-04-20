@@ -1,4 +1,7 @@
-# Get rid of the grid
+## There is no grid
+## The grid is a lie
+
+
 
 Hammock normcore asymmetrical, cred austin plaid lomo. Thundercats sustainable lyft plaid franzen fixie asymmetrical cold-pressed PBR&B. Deep v man braid shabby chic, migas kogi cronut keffiyeh seitan hashtag woke bitters lomo man bun tilde bespoke. Skateboard quinoa hell of freegan dreamcatcher.
 
