@@ -6,6 +6,7 @@ const md = require('markdown-it')({
   html: true,
   linkify: true,
 });
+const underline = require('markdown-it-underline');
 const minify = require('html-minifier').minify;
 const glob = require('glob-fs')({ gitignore: true });
 const nunjucks = require('nunjucks');
@@ -19,7 +20,7 @@ const COMPILED_SITE_PATH = path.resolve(__dirname, '..', '_site');
 const TITLE = `Gridless Design`;
 const DESCRIPTION = `Get rid of the grid!`;
 const URL = 'https://gridless.design';
-const FONT_PRELOAD = 'https://fonts.googleapis.com/css2?family=Epilogue:wght@900&family=Open+Sans&display=swap';
+const FONT_PRELOAD = 'https://fonts.googleapis.com/css2?family=Epilogue:wght@900&family=Open+Sans:wght@400;700&display=swap';
 
 md.use(mila, {
   pattern: /^http/,
@@ -27,7 +28,7 @@ md.use(mila, {
     target: '_blank',
     rel: 'noopener'
   }
-});
+}).use(underline);
 
 const metadata = {
   title: TITLE,

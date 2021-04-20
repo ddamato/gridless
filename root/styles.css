@@ -2,18 +2,41 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background: #000a29;
-  line-height: 1.5;
-  color: #fff;
+:root {
+  --bg-color: #000a29;
   --accent-color: #e2439a; /* https://share.getcloudapp.com/9ZuxRAym */
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--bg-color);
+  line-height: 1.5;
+  color: #fff;
+}
+
+a {
+  color: var(--accent-color);
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Epilogue', sans-serif;
   line-height: 1.25;
+}
+
+h2 + p::first-letter,
+h3 + p::first-letter,
+h4 + p::first-letter,
+h5 + p::first-letter,
+h6 + p::first-letter {
+  font-size: 2em;
+  margin-right: .2em;
+  line-height: 1;
+  float: left;
+  border: 1px solid;
+  padding: .15em .35em .2em;
+  font-weight: bolder;
+  background-color: var(--accent-color);
+  text-shadow: .1em .1em var(--bg-color);
 }
 
 .max-width {

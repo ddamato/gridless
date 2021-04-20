@@ -1,14 +1,12 @@
 ## There is no grid
 ## The grid is a lie
 
+## The medium is _not_ the message
 
+The grid in design has roots in aligning type before the printing press. Authors would scribe against page lines like old age looseleaf paper. This was further utilized in later printed works which called for varied content to coexist on the same document. These guidelines were later immortalized in Swiss Style Design where they found their way into more dramatic forms of stylized content.
 
-Hammock normcore asymmetrical, cred austin plaid lomo. Thundercats sustainable lyft plaid franzen fixie asymmetrical cold-pressed PBR&B. Deep v man braid shabby chic, migas kogi cronut keffiyeh seitan hashtag woke bitters lomo man bun tilde bespoke. Skateboard quinoa hell of freegan dreamcatcher.
+What is important to consider is the grid has historically been tied to the media where the content is permanent on delivery. The person absorbing this medium cannot change the orientation, contrast, language, etc. based on their needs. On the web, each user experiencing content will do so in a different way. Because of this, **the content must influence the layout** on the web.
 
-Plaid migas fingerstache XOXO iPhone helvetica pok pok activated charcoal organic man bun williamsburg master cleanse bespoke vape yr. Banjo retro single-origin coffee readymade, raw denim whatever bicycle rights yr jianbing 3 wolf moon 8-bit synth quinoa +1. Fam kickstarter subway tile fashion axe. Man braid keffiyeh tumblr cliche selfies yuccie migas meh flexitarian paleo af tumeric pop-up bushwick.
+## The gap in apps
 
-Yuccie shoreditch blue bottle wayfarers try-hard retro cloud bread food truck flexitarian pinterest next level. Forage fanny pack trust fund cred polaroid leggings sustainable poke vexillologist pitchfork cronut taiyaki. Kitsch leggings yuccie pabst lumbersexual microdosing. Butcher pitchfork sustainable bitters palo santo waistcoat. Flannel organic art party slow-carb. Retro mumblecore gentrify af slow-carb vegan, snackwave vice chartreuse.
-
-Brooklyn mumblecore chillwave keffiyeh portland cred, tofu PBR&B activated charcoal pork belly XOXO actually. Affogato tumblr hella lo-fi slow-carb man braid DIY, chia heirloom. Sustainable banjo celiac viral farm-to-table, schlitz knausgaard vegan echo park poutine. Whatever disrupt vaporware, man bun pickled bitters blog church-key vegan locavore normcore retro viral. Occupy jianbing next level ennui bespoke hella, thundercats small batch farm-to-table drinking vinegar taxidermy you probably haven't heard of them subway tile hot chicken scenester. Pok pok twee brunch whatever meditation artisan put a bird on it. Post-ironic thundercats air plant vegan portland ennui 90's irony iPhone banjo jean shorts dreamcatcher sriracha.
-
-Try-hard bitters small batch, paleo trust fund humblebrag stumptown echo park. Keffiyeh neutra craft beer 3 wolf moon authentic artisan. Biodiesel celiac fam meditation, tumblr semiotics cardigan. Disrupt cold-pressed pitchfork 90's.
+Design applications struggle to provide a proper representation of how a crafted layout will change based on user settings; they can only provide static print layout artboards that allow for only one presentation of the content. They are currently unable to fully realize the significant changes that may occur based on changes that may be present in certain circumstances.
