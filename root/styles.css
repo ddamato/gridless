@@ -8,8 +8,10 @@
 }
 
 body {
+  margin: 0;
   font-family: 'Open Sans', sans-serif;
   background: var(--bg-color);
+  font-size: 1.2em;
   line-height: 1.5;
   color: #fff;
 }
@@ -21,13 +23,10 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Epilogue', sans-serif;
   line-height: 1.25;
+  margin-top: 3em;
 }
 
-h2 + p::first-letter,
-h3 + p::first-letter,
-h4 + p::first-letter,
-h5 + p::first-letter,
-h6 + p::first-letter {
+h2 + p::first-letter {
   font-size: 2em;
   margin-right: .2em;
   line-height: 1;
@@ -40,8 +39,9 @@ h6 + p::first-letter {
 }
 
 .max-width {
-  max-width: 80ch;
+  max-width: 70ch;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .logo {
