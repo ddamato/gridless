@@ -26,16 +26,41 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 3em;
 }
 
+main {
+  background: #fff;
+  color: #000;
+  border-radius: 2px;
+}
+
+main:before {
+  content: '';
+  border: 4px dotted var(--accent-color);
+  width: 30%;
+  padding-top: 30%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  right: 20%;
+  top: 10%;
+}
+
+main > :first-child {
+  margin-top: 1em;
+  padding-top: 2rem;
+}
+
 h2 + p::first-letter {
   font-size: 2em;
   margin-right: .2em;
   line-height: 1;
   float: left;
-  border: 1px solid;
+  border: 2px dotted var(--accent-color);
   padding: .15em .35em .2em;
   font-weight: bolder;
-  background-color: var(--accent-color);
-  text-shadow: .1em .1em var(--bg-color);
+  color: #000;
+  background-color: #fff;
+  text-shadow: .05em .05em var(--accent-color);
+  border-radius: 2px;
 }
 
 .max-width {

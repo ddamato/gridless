@@ -1,33 +1,3 @@
-
-## outline
-
-1. history of the grid
-    1. writing on paper
-    1. priting on paper
-1. history of web design
-    1. originally for documents and data
-    1. hacking css for layout purposes
-1. problems with web design tools
-    1. artboards
-    1. replaceable content
-    1. lack of reusable values
-1. problems with breakpoints
-    1. only page level changes
-    1. as specific as artboard dimensions
-    1. explicit conditions versus implicit rules
-1. content-aware layout techniques
-    1. consistent spacing
-    1. max/min widths
-    1. margin auto
-    1. flexbox
-    1. grid
-    1. holy ablatross/fab four
-
-
-
-## There is no grid
-## The grid is a lie
-
 ## History of the design grid
 
 The use of a design grid dates back to writing on parchment. Lines would help an author to keep each word, sentence, and paragraph positioned properly in a visually pleasing way. Later, more stylistic designs used a grid to represent content in interesting ways on other print material such as posters, billboards, and flyers. In these examples, the content and the layout are connected together. The content and final layout are both in complete control of the author; they cannot not change based on the person viewing the content because of the nature of print. Once it's printed, it's permanent to that page as intended by the author.
@@ -37,7 +7,6 @@ The introduction of the web was to first make research papers link to each other
 Around this time, the web was not just viewed on desktop computers. Mobile web browsers began to appear on handheld devices and it was becoming common for people to access the web on-the-go. The web pages that were designed for desktop computer screens were too small to view on mobile devices. So if the website had the resources, they would often create an entirely separate site to deliver to mobile devices. This would require the web developer to maintain separate desktop and mobile experiences. This came at a cost of maintaining duplicate content and separate layouts for each page.
 
 What if, instead of maintaining different layouts for the same content, each page was coded to conditionally respond to the device's screen size? This is the basis behind responsive design and it changed the way web authors worked. Now, a developer can maintain a single page and create rules for how the parts of the page should change based on the available space. With this complexity came challenges for the way designers have been working for centuries. How do you design the same content for all possible devices?
-
 ## Deceptive problems
 
 Remember, prior to responsive design, the content of the page and its layout were designed intertwined. The designer was solely in charge of both. With the introducion of the web and a completely different skill set, it was common for designers to hand off their work to be coded as an interactive web page. This required the web developer to intepret the design in code which often resulted in varying levels of fidelity. One of the reasons for this is how an HTML page expects content.
@@ -66,4 +35,24 @@ Another problem with breakpoints is they are only related to the device's screen
 
 ## Content-aware layout techniques
 
+The best way to develop a responsive website is inside-out; meaning to start with the smallest parts first and define them properly. Then you use those parts to build larger parts finally resulting in a full page experience. This can be counter-intuitive for those familiar with the design grid as one may expect to start with a place to put things. Instead we start with the things we want to place as their arrangement will dictate the layout.
 
+### Consistent spacing
+
+Choosing a consistent spacing system is an important consideration for relating items to each other. Ensure that there isn't too many different spacing values. The more spacing values you provide, the harder it will be to choose the correct one. A logirithmic scale is a good recommendation for this.
+
+- `.25rem` (`4px`) - xs
+- `.5rem` (`8px`) - sm
+- `1rem` (`16px`) - md
+- `2rem` (`32px`) - lg
+- `3rem` (`64px`) - xl
+
+Spacing isn't just about the gap between containers, it is also the area between lines of text. If your page is text heavy, you'll also want to consider the line-height of paragraph and headline text to align with other elements on the page. 
+
+1. content-aware layout techniques
+    1. consistent spacing
+    1. max/min widths
+    1. margin auto
+    1. flexbox
+    1. grid
+    1. holy ablatross/fab four
