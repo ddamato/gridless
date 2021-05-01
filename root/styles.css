@@ -26,6 +26,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 3em;
 }
 
+code {
+  border: 1px solid rgba(0,0,0,.1);
+  padding: .1em .2em;
+  vertical-align: middle;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 2px;
+}
+
 main {
   background: #fff;
   color: #000;

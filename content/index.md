@@ -17,7 +17,13 @@ Remember, prior to responsive design, the content of the page and its layout wer
 
 Most applications that designers use to create modern web pages are no better than a digital piece of paper. They do not accurately describe what a web page expects; most specifically in terms of responsive design. So designers are often confined to specific artboard dimensions without the ability to see the in-between sizes or content changes based on language or accessibility preferences. Each design is locked as a single experience and a single grid for alignment. In order to display a new layout, a new artboard is created in the design tool with a grid that fits that artboard. Designers will then duplicate and resize the elements to fit the new artboard's grid. This is not the essence of responsive design, it is actually the same technique used in print for centuries.
 
-The web is different, content can change based on user preferences and device settings. Engineers craft resuable components that can adapt to their content. **No designer can mockup all the potential layouts**. Instead a seasoned designer should make decisions that inform what the parts of the layout should do if and when certain scenarios occur. The design tools today have difficulty presenting this so it is often up to an engineer to ask the right questions to understand the designer's intent.
+The web is different. Content can change based on user preferences and device settings. Engineers craft resuable components that can adapt to their content. **No designer can mockup all the potential layouts**. Instead a seasoned designer should make decisions that inform what the parts of the layout should do if and when certain scenarios occur. The design tools today have difficulty presenting this so it is often up to an engineer to ask the right questions to understand the designer's intent. Here's a small sampling of possible changes that could occur which are often overlooked.
+
+- Text length varying based on language translation
+- Font size varying based on character encoding and accessibility settings
+- Color contrast varying based on user preferences
+- Content varying based on user input
+- Other elements changing size to accommodate the above examples
 
 ### Breakpoints
 
@@ -26,13 +32,6 @@ One of the ways that bridged the gap between artboards and the web was to condit
 To be clear, style properties such as color and typography should often be followed to design specifications by an engineer. However, layout must be intepreted in order to provide a smart responsive design. **No design tool is yet able to provide guidelines for a proper responsive approach** which prepares for all possible content and dimension changes. This comes with experience as a skilled web engineer and cannot easily be presented as guidelines within design tools.
 
 Another problem with breakpoints is they are only related to the device's screen dimensions. Initially, one may believe that if you change the page layout at a breakpoint, smaller layouts that are related to the larger layout can change along with that breakpoint. Again, this is the same pattern as print layout; one layout for one specific set of dimensions. However, the trouble is compounded because developers have not had the tools to trigger layout changes from anywhere but the page (or artboard) level. If HTML elements were able to make significant layout changes based on the container they are in, as required to make visually interesting layouts in HTML, then a designer would not need to consider each page layout as a whole but instead the rules of the components inside of different size containers. Designing at the atomic level first with an understanding that the content can change will help inform larger layouts that may never be fully realized by a designer but still remain an accessible and well-designed experience.
-
-- Text length varying based on language translation
-- Font size varying based on character encoding and accessibility settings
-- Color contrast varying based on user preferences
-- Content varying based on user input
-- Other elements changing size to accommodate the above examples
-
 ## Content-aware layout techniques
 
 The best way to develop a responsive website is inside-out; meaning to start with the smallest parts first and define them properly. Then you use those parts to build larger parts finally resulting in a full page experience. This can be counter-intuitive for those familiar with the design grid as one may expect to start with a place to put things. Instead we start with the things we want to place as their arrangement will dictate the layout.
@@ -47,7 +46,17 @@ Choosing a consistent spacing system is an important consideration for relating 
 - `2rem` (`32px`) - lg
 - `3rem` (`64px`) - xl
 
-Spacing isn't just about the gap between containers, it is also the area between lines of text. If your page is text heavy, you'll also want to consider the line-height of paragraph and headline text to align with other elements on the page. 
+Spacing isn't just about the gap between containers, it is also the area between lines of text. If your page is text heavy, you'll also want to consider the line-height of paragraph and headline text to align with other elements on the page.
+
+### Dimensional thresholds
+
+Another good practice is to set minimum and maximums on containing elements. Consider a modal element found on an ultrawide screen. Certainly, you wouldn't want the container to stretch the full length of a wide screen, so adding a maximum width will contain it before it gets too large. Then as the screen size shrinks, you can set a minimum spacing around the container to show the backdrop of the content behind it. This is done completely without breakpoints. If you want spacing to relate to the device dimensions, you could use `vw`, `vh`, `vmin`, or `vmax` units but be sure to test on edge-cases. `1vw` on an ultrawide screen will become very large.
+
+### Automatic margins
+
+While the `margin: 0 auto;` rule is common for centering elements horizontally, it can also be used to push elements within their containers. Consider setting login buttons on the right side of a header. You could set `margin-left: auto;` on the button to push it against the right edge. This is better than the `float: right;` technique as it doesn't disrupt the element's document flow. Pairing this technique with flexbox will allow you to do similar pushing in the vertical direction.
+
+In browsers that support the logical properties, it is recommended to set `margin-inline-start: auto;` instead of `margin-left: auto;` to prepare for bidirectional layouts. This will allow for pages to be flipped in languages that expect content to be read from right-to-left, thereby pushing the button to the left in those languages.
 
 1. content-aware layout techniques
     1. consistent spacing
