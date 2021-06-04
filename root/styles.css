@@ -2,36 +2,51 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bkgd: white;
+  --frgd: #333;
+  --accent: yellow;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bkgd: #111;
+    --frgd: white;
+    --accent: rebeccapurple;
+  }
+}
+
 body {
   --gap: 2rem;
   margin: 0;
-  font-family: Lora;
+  font-family: Lora, serif;
   line-height: 1.5;
-	color: #333;
+	color: var(--frgd);
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+  background-color: var(--bkgd);
 }
 
 h1, h2, h3 {
-	font-family: Poppins;
+	font-family: Poppins, sans-serif;
 	font-weight: 700;
 	margin: 0;
 	line-height: 1.1;
 	letter-spacing: -.05em;
-	color: #000;
+  color: var(--frgd);
 }
 
 header {
   padding: 0 var(--gap);
-	border-bottom: 1rem solid yellow;
+	border-bottom: 1rem solid var(--accent);
 	display: flex;
   flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background-color: inherit;
   transition: transform .5s ease;
   transform: translateY(0);
 }
