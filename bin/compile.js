@@ -17,8 +17,8 @@ const env = new nunjucks.Environment(loader, {
 });
 
 const COMPILED_SITE_PATH = path.resolve(__dirname, '..', '_site');
-const TITLE = `Gridless Design`;
-const DESCRIPTION = `Get rid of the grid!`;
+const TITLE = `gridless.design`;
+const DESCRIPTION = `get rid of the grid!`;
 const URL = 'https://gridless.design';
 const FONT_PRELOAD = 'https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@300;700&display=swap';
 
