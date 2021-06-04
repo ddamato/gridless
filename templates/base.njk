@@ -4,13 +4,20 @@
     {% include "head.njk" %}
   </head>
   <body>
-    <header class="max-width">
-      <div class="logo heading">
-        <span>get rid</span>
-        <span style="text-indent: .6em;">of <s>grid</s></span>
-      </div>
+    <header>
+      <a href="/">
+        <h1>
+          {% include "logo.njk" %}
+          gridless.design
+        </h1>
+      </a>
+      <ul>
+        <li><a href="/history">history</a></li>
+        <li><a href="/designers">designers</a></li>
+        <li><a href="/developers">developers</a></li>
+      </ul>
     </header>
-    <main class="max-width">
+    <main>
       {{ content | safe }}
     </main>
   </body>
