@@ -20,5 +20,13 @@
     <main>
       {{ content | safe }}
     </main>
+    <script>
+      const header = document.querySelector('header');
+      let pos = 0;
+      window.addEventListener('scroll', () => {
+        header.classList.toggle('hide-header', pos < window.scrollY);
+        pos = window.scrollY;
+      })
+    </script>
   </body>
 </html>

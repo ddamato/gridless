@@ -32,6 +32,12 @@ header {
   position: sticky;
   top: 0;
   background-color: #fff;
+  transition: transform .5s ease;
+  transform: translateY(0);
+}
+
+.hide-header {
+  transform: translateY(-100%);
 }
 
 header > * {
