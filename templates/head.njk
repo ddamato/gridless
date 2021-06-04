@@ -23,16 +23,8 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="alternate" href="{{ url }}" hreflang="en-us" />
 
-<link href="{{ fontPreload }}" rel="preload" as="style">
-<link href="{{ fontPreload }}" rel="stylesheet" media="print" onload="this.media='all'">
-
-<link href="styles.css" rel="preload" as="style">
-<link href="styles.css" rel="stylesheet" media="print" onload="this.media='all'">
-
-<noscript>
-  <link rel="stylesheet" href="{{ fontPreload }}">
-  <link rel="stylesheet" href="styles.css">
-</noscript>
+<link href="{{ fontPreload }}" rel="stylesheet" media="all">
+<link href="styles.css" rel="stylesheet" media="all">
 
 <script type="text/javascript" defer>
   window.onload = () => 'serviceWorker' in navigator && navigator.serviceWorker.register('sw.js').then((registration) => registration.update()).catch((err) => {});
