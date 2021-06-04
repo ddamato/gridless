@@ -1,2 +1,6 @@
 ## get rid of grid
-Banjo tilde cray, umami activated charcoal af listicle portland keytar wolf jianbing single-origin coffee. Tote bag tacos ennui street art before they sold out YOLO cronut. Kickstarter echo park thundercats green juice godard 90's. Craft beer deep v gentrify seitan humblebrag, bicycle rights food truck enamel pin hammock hashtag gastropub keytar vaporware stumptown locavore.
+> "Blasphemy, I need structure and order!"
+
+The web is good at these things, just not in the ways that designers have been accustomed to working. We'll take a look at how we got here and how we can change our perspective. Let's think outside of the grid and allow other guidelines to provide a comprehensive layout.
+
+[History of the design grid](/history)

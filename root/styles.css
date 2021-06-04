@@ -28,13 +28,22 @@ body {
   background-color: var(--bkgd);
 }
 
+a {
+  color: currentColor;
+}
+
+main a:not([href^="http"]):after {
+  content: '\002192';
+  display: inline-block;
+  margin-inline-start: 1ch;
+}
+
 h1, h2, h3 {
 	font-family: Poppins, sans-serif;
 	font-weight: 700;
 	margin: 0;
 	line-height: 1.1;
 	letter-spacing: -.05em;
-  color: var(--frgd);
 }
 
 header {
@@ -111,6 +120,7 @@ main > h2 {
 }
 
 main > :not(h2) {
+  margin: 0;
   min-width: 60%;
   max-width: 100%;
   width: calc((var(--threshold) - 100%) * 1000);
@@ -129,4 +139,10 @@ main > hr {
 main p {
   margin-top: 0;
   margin-bottom: var(--gap);
+}
+
+main blockquote {
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-style: italic;
 }
