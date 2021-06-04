@@ -70,19 +70,19 @@ h1 {
 }
 
 h1 svg {
-  margin-right: .25em;
+  margin-inline-end: .25em;
 }
 
 header ul {
   list-style-type: none;
   margin: 0;
-  padding-left: 0;
+  padding-inline-start: 0;
   display: flex;
   flex-wrap: wrap;
 }
 
 header li:not(:last-child) {
-  margin-right: 1rem
+  margin-inline-end: 1rem;
 }
 
 header ul a {
@@ -104,9 +104,9 @@ main > h2 {
   min-width: calc(40% - var(--gap));
   max-width: 100%;
   width: calc((var(--threshold) - 100%) * 1000);
-  text-align: right;
+  text-align: end;
 	font-size: min(3.5rem, 8vw);
-  float: left;
+  float: left; /* logical property support needed */
   padding-bottom: var(--gap);
 }
 
@@ -114,7 +114,7 @@ main > :not(h2) {
   min-width: 60%;
   max-width: 100%;
   width: calc((var(--threshold) - 100%) * 1000);
-  margin-left: auto;
+  margin-left: auto; /* logical property support needed */
 }
 
 main > hr {
