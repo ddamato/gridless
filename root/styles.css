@@ -3,6 +3,7 @@
 }
 
 body {
+  --gap: 2rem;
   margin: 0;
   font-family: Lora;
   line-height: 1.5;
@@ -22,7 +23,7 @@ h1, h2, h3 {
 }
 
 header {
-  padding: 0 2rem;
+  padding: 0 var(--gap);
 	border-bottom: 1rem solid yellow;
 	display: flex;
   flex-wrap: wrap;
@@ -72,22 +73,20 @@ main {
   --threshold: calc(var(--max-width) - 100px);
   max-width: var(--max-width);
 	margin: auto;
-	padding: 2rem;
+	padding: var(--gap);
 	align-self: center;
   font-size: 1.1em;
   line-height: 2;
 }
 
 main > h2 {
-  min-width: 40%;
+  min-width: calc(40% - var(--gap));
   max-width: 100%;
   width: calc((var(--threshold) - 100%) * 1000);
   text-align: right;
 	font-size: min(3.5rem, 8vw);
   float: left;
-  display: flex;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: var(--gap);
 }
 
 main > :not(h2) {
@@ -103,10 +102,10 @@ main > hr {
   height: 0;
   width: 100%;
   max-width: 100%;
-  margin: 4rem 0;
+  margin: calc(var(--gap) * 2) 0;
 }
 
 main p {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: var(--gap);
 }

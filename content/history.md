@@ -1,4 +1,4 @@
-## history
+## a tale as old as design
 The use of a design grid dates back to writing on parchment. Lines would help an author to keep each word, sentence, and paragraph positioned properly in a visually pleasing way. Later, more stylistic designs used a grid to represent content in interesting ways on other print material such as posters, billboards, and flyers. In these examples, the content and the layout are connected together. The content and final layout are both in complete control of the author; they cannot not change based on the person viewing the content because of the nature of print. Once it's printed, it's permanent to that page as intended by the author.
 The introduction of the web was to first make research papers link to each other digitally. Additional methods were added in code to allow for more document customizations. People began to use these tools in unintended ways to achieve different layouts. HTML tables and floating columns became standards of web design layout and a concept of responsive design was on the horizon.
 
@@ -8,7 +8,7 @@ What if, instead of maintaining different layouts for the same content, each pag
 
 ---
 
-## web ≠ print
+## the web is not print
 Remember, prior to responsive design, the content of the page and its layout were intertwined. The designer was solely in charge of both. With the introduction of the web and a completely different skill set, it was common for designers to hand off their work to be coded as an interactive web page. This required the web developer to interpret the design in code which often resulted in varying levels of fidelity. One of the reasons for this is how an HTML page expects content.
 
 HTML was designed for writing documents; paragraphs of text with headlines and some images. It was as useful as a slightly advanced typewriter. It was not engineered to place elements arbitrarily around the document. It expects content to flow as a typewriter would set text line after line. In order to place content in visually interesting ways outside of normal document flow, like in a grid, engineers would need to get creative in order to match design's expectations. Luckily, HTML matured to allow for nested containers and relationships between elements for the exclusive purpose of layout were explored. This problem was circumvented with new techniques but problems with the core web design process still exist today.
