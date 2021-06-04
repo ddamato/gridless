@@ -22,12 +22,19 @@ h1, h2, h3 {
 }
 
 header {
-  padding: 1rem 2rem;
+  padding: 0 2rem;
 	border-bottom: 1rem solid yellow;
 	display: flex;
   flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+header > * {
+  padding: 1rem 0;
 }
 
 header > a {
@@ -37,6 +44,7 @@ header > a {
 h1 {
   display: flex;
   align-items: center;
+  font-size: min(2rem, 10vw);
 }
 
 h1 svg {
@@ -46,8 +54,9 @@ h1 svg {
 header ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 header li:not(:last-child) {
