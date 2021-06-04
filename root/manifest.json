@@ -4,11 +4,10 @@
   "lang": "en",
   "start_url": "/",
   "scope": "/",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
   "dir": "ltr",
   "display": "standalone",
   "orientation": "any",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "android-chrome-192x192.png",
@@ -21,5 +20,6 @@
       "type": "image/png"
     }
   ],
-  "prefer_related_applications": false
- }
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}
