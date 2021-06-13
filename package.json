@@ -6,7 +6,8 @@
     "gridless": "compile.js"
   },
   "scripts": {
-    "dev": "rm -rf _site && npm run compile && npm run copy",
+    "dev": "rm -rf _site && npm run compile && npm run build:examples && npm run copy",
+    "build:examples": "node ./bin/examples.js",
     "build": "npm run dev && npm run minify",
     "compile": "node ./bin/compile.js",
     "copy": "mkdir -p _site && cp -r root/. _site",

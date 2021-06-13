@@ -16,6 +16,11 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
 body {
   --gap: 2rem;
   margin: 0;
@@ -103,6 +108,7 @@ main {
   --threshold: calc(var(--max-width) - 100px);
   max-width: var(--max-width);
 	margin: auto;
+  margin-bottom: 10rem;
 	padding: var(--gap);
 	align-self: center;
   font-size: 1.1em;
@@ -136,7 +142,7 @@ main > hr {
   margin: calc(var(--gap) * 2) 0;
 }
 
-main p {
+main p, main ul {
   margin-top: 0;
   margin-bottom: var(--gap);
 }
@@ -145,4 +151,23 @@ main blockquote {
   font-size: 1.5em;
   line-height: 1.5;
   font-style: italic;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  padding: 1rem;
+  transform: translateY(calc(100% + 1rem));
+  opacity: 0;
+  transition: .218s ease;
+  z-index: 1;
+  background: inherit;
+  border: 1px solid;
+}
+
+#back-to-top.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
