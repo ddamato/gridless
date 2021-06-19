@@ -1,3 +1,29 @@
-* {
-  box-sizing: border-box;
+.border-on-grid {
+  display: flex;
+  height: 100%;
+  background-size: calc(1rem - 1px) calc(1rem - 1px);
+  background-position: center;
+  background-image:
+    linear-gradient(to right, var(--accent) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--accent) 1px, transparent 1px);
+}
+
+.border-on-grid > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 3rem .25rem;
+}
+
+.button {
+  font: inherit;
+  background: var(--bkgd);
+  border: 1px dashed;
+  margin: 0;
+  cursor: pointer;
+  padding: 0 1rem;
+  height: 44px;
+  color: inherit;
+  line-height: 1;
 }

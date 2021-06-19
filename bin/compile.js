@@ -7,6 +7,7 @@ const md = require('markdown-it')({
   linkify: true,
 });
 const underline = require('markdown-it-underline');
+const container = require('markdown-it-container');
 const minify = require('html-minifier').minify;
 const glob = require('glob-fs')({ gitignore: true });
 const nunjucks = require('nunjucks');
@@ -28,7 +29,9 @@ md.use(mila, {
     target: '_blank',
     rel: 'noopener'
   }
-}).use(underline);
+})
+.use(underline)
+.use(container, 'example');
 
 const metadata = {
   title: TITLE,

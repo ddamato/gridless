@@ -22,10 +22,17 @@ async function extractResources() {
   }, {});
 }
 
+function kebabToPascal(name) {
+  return name
+  .split('-')
+  .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+  .join('');
+}
+
 function prepareComponents(examples) {
   return Object.entries(examples).map(([component, { html, css }]) => {
-    const camelName = component.replace(/-./g, x=>x.toUpperCase()[1]);
-    return `window.customElements.define('ex-${component}', (class Example${camelName} extends HTMLElement {
+    const pascalName = kebabToPascal(component);
+    return `window.customElements.define('ex-${component}', (class Example${pascalName} extends HTMLElement {
       constructor() {
         super();
         this.attachShadow({ mode: 'open' });

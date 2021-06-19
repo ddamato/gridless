@@ -105,6 +105,7 @@ header ul a {
 
 main {
   --max-width: 900px;
+  --col-width: 540px;
   --threshold: calc(var(--max-width) - 100px);
   max-width: var(--max-width);
 	margin: auto;
@@ -116,7 +117,7 @@ main {
 }
 
 main > h2 {
-  min-width: calc(40% - var(--gap));
+  min-width: calc(100% - var(--col-width) - var(--gap));
   max-width: 100%;
   width: calc((var(--threshold) - 100%) * 1000);
   text-align: end;
@@ -127,7 +128,7 @@ main > h2 {
 
 main > :not(h2) {
   margin: 0;
-  min-width: 60%;
+  min-width: var(--col-width);
   max-width: 100%;
   width: calc((var(--threshold) - 100%) * 1000);
   margin-left: auto; /* logical property support needed */
@@ -151,6 +152,22 @@ main blockquote {
   font-size: 1.5em;
   line-height: 1.5;
   font-style: italic;
+}
+
+main .example {
+  border: 1px solid;
+  max-width: 100%;
+  margin-bottom: var(--gap);
+  padding: 1rem;
+  border-radius: 1rem;
+  direction: rtl;
+  resize: both;
+  overflow: auto;
+}
+
+main .example > p {
+  display: contents;
+  direction: ltr;
 }
 
 #back-to-top {

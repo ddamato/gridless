@@ -36,6 +36,7 @@
     "imagemin-mozjpeg": "^9.0.0",
     "ls-minifier": "^2.1.0",
     "markdown-it": "^11.0.0",
+    "markdown-it-container": "^3.0.0",
     "markdown-it-link-attributes": "^3.0.0",
     "markdown-it-underline": "^1.0.1",
     "nunjucks": "^3.2.2"
