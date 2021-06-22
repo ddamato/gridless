@@ -10,7 +10,15 @@ The exercise of wireframing can help loosen the need for a grid. While wireframi
 ## content-driven design
 Now, consider what may happen when button text is more than one word, or perhaps a very long word. Think about localized words or flipping the layout for audiences that read right-to-left. Increases in font-size for vision-impared users need to be in mind. All of these things can affect the way that a component might look because the change will happen from the innermost layer of components. If the layout of the component should shift to accommodate different content, be sure to document this. Layouts shouldn’t shift because of the device size, it should shift due to the content not fitting in the current layout.
 
+::: example
+<ex-buy-now></ex-buy-now>
+:::
+
 It’s helpful to think of these things as individual components; perhaps from a design system. Each component can be a self-contained experience that adapts to changes based on the parent container it is placed into. A good example could be a navigation bar that collapses overflow items into a flyout menu. Longer words in the navigation will cause the overflow to trigger earlier than shorter words. A well crafted reusable component will have these rules self-contained and not dependent on other elements or the page itself to change.
+
+::: example
+<ex-collapse-nav></ex-collapse-nav>
+:::
 
 From here, very few components can be constrained to align to an overlaid design grid. This is due to the content variations within these components and the ways that they can be altered by other stakeholders and users that will eventually need to flow outside of a design grid.
 

@@ -1,0 +1,23 @@
+div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button {
+  font: inherit;
+  font-family: sans-serif;
+  font-size: .75em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: .5rem 1rem;
+  border-radius: .25em;
+  background: var(--accent);
+  color: inherit;
+  border: 1px solid var(--accent);
+  cursor: pointer;
+}
+
+button[dir="rtl"] {
+  margin-inline-end: auto;
+}

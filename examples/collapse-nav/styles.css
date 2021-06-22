@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+:host {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+  position: absolute;
+}
+
+nav {
+  --item-width: 12ch;
+  overflow: hidden;
+  font-family: sans-serif;
+  position: relative;
+  min-height: 42px;
+  background-color: var(--accent);
+}
+
+input[type="checkbox"]:checked ~ nav {
+  overflow: visible;
+}
+
+ul {
+  position: absolute;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 15ch repeat(auto-fill, var(--item-width));
+	grid-auto-flow: dense;
+	top: 0;
+	left: 0;
+	right: var(--item-width);
+}
+
+li:not(:empty) {
+	min-width: var(--item-width);
+	padding: .5rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  font-size: .75em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  background-color: var(--accent);
+  cursor: pointer;
+}
+
+li:first-child {
+	grid-row: 1 / -1;
+	grid-column: -1;
+}
+
+li:last-child {
+	grid-row: 2 / span 20;
+	grid-column: 1 / -1;
+}
+
+label {
+  cursor: inherit;
+}
+
+article {
+  flex: 1;
+  border: 1px solid var(--accent);
+  margin-top: 1rem;
+}

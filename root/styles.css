@@ -5,14 +5,14 @@
 :root {
   --bkgd: white;
   --frgd: #333;
-  --accent: yellow;
+  --accent: #ffb000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bkgd: #111;
     --frgd: white;
-    --accent: rebeccapurple;
+    --accent: #024a60;
   }
 }
 
