@@ -122,7 +122,7 @@ main > h2 {
   max-width: 100%;
   width: calc((var(--threshold) - 100%) * 1000);
   text-align: end;
-	font-size: min(3.5rem, 8vw);
+	font-size: min(3rem, 8vw);
   float: left; /* logical property support needed */
   padding-bottom: var(--gap);
 }
