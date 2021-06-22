@@ -63,6 +63,7 @@ header {
   background-color: inherit;
   transition: transform .5s ease;
   transform: translateY(0);
+  z-index: 1;
 }
 
 .hide-header {
