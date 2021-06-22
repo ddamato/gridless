@@ -48,6 +48,10 @@ Keeping general alignment and common spacing values will raise less questions an
 
 It is recommended to keep the number of possible spacing values low. One reason is to limit decision making for which value to use. A designer should identify if items belong together and then consider using smaller spacing values to signify this. If there’s many small spacing values, it’ll be difficult for a designer to choose which one should be selected; even with available guidance. Using the same spacing values between components may often provide the illusion of a design grid just by the common internal spacing applied.
 
+::: example
+<ex-spacing-values></ex-spacing-values>
+:::
+
 Designers should also provide containers in terms of percentage of the parent instead of how many grid columns are expected. When designing a form for example, instead of describing that the fields should span 6 out of 12 columns, describe that the fields span 50% of the width of the container. It’s important to relate the size of the component to the container instead of the page as that is how a developer will ultimately need to implement it. When the field layout needs to change between desktop (6 out of 12 columns) to tablet (4 out of 8 columns), the ratio is still the same (50%). There are modern tools developers can use to include the reusable spacing values to assist in the appearance of a design grid without actually corresponding to one.
 
 [How might we execute these recommendations?](/for-developers)
