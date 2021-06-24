@@ -33,7 +33,11 @@ Possibly the most important principle for our purposes, proximity, shows that ob
 <ex-proximity></ex-proximity>
 :::
 
-Another principle, continuation, helps with alignment without requiring a design grid. If you aim to align components along invisible guidelines, the user will naturally guide their eye down this line. As long as you attempt to align objects along some axis, the user will find comfort and trust in the experience.
+Another principle, continuity, helps with alignment without requiring a design grid. If you aim to align components along invisible guidelines, the user will naturally guide their eye down this line. As long as you attempt to align objects along some axis, the user will find comfort and trust in the experience.
+
+::: example
+<ex-continuity></ex-continuity>
+:::
 
 ---
 
