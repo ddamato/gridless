@@ -8,6 +8,7 @@ const md = require('markdown-it')({
 });
 const underline = require('markdown-it-underline');
 const container = require('markdown-it-container');
+const headings = require('markdown-it-named-headings');
 const minify = require('html-minifier').minify;
 const glob = require('glob-fs')({ gitignore: true });
 const nunjucks = require('nunjucks');
@@ -30,6 +31,7 @@ md.use(mila, {
     rel: 'noopener'
   }
 })
+.use(headings)
 .use(underline)
 .use(container, 'example');
 

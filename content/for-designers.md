@@ -1,9 +1,11 @@
 ## pencil & paper
-The exercise of wireframing can help loosen the need for a grid. While wireframing is still bound to the size of any one artboard, the lack of precision helps flesh out the important concepts of the general experience without losing focus on other design minutiae. While you could wireframe against a snappy program, it’s often faster to less expensive (both in time and money) to draw on paper. Sending a photo of the drawing for getting quick feedback on the general layout and flow of your designs will result in more concise comments. It might not be as technologically advanced as other methods, but tech can get in the way of communicating the foundational experience to your partners.
+The exercise of wireframing can help loosen the need for a grid. While wireframing is still bound to the size of any one artboard, the lack of precision helps flesh out the important concepts of the general experience without losing focus on other design minutiae.
 
 ::: example
 <ex-wireframe></ex-wireframe>
 :::
+
+While you could wireframe against a snappy program, it’s often faster to less expensive (both in time and money) to draw on paper. Sending a photo of the drawing for getting quick feedback on the general layout and flow of your designs will result in more concise comments. It might not be as technologically advanced as other methods, but tech can get in the way of communicating the foundational experience to your partners.
 
 ---
 
@@ -56,11 +58,13 @@ If you have a strict design grid which expects components to be confined into sp
 
 Keeping general alignment and common spacing values will raise less questions and uncommon behavior while still maintaining a clean and aesthetically pleasing layout.
 
-It is recommended to keep the number of possible spacing values low. One reason is to limit decision making for which value to use. A designer should identify if items belong together and then consider using smaller spacing values to signify this. If there’s many small spacing values, it’ll be difficult for a designer to choose which one should be selected; even with available guidance. Using the same spacing values between components may often provide the illusion of a design grid just by the common internal spacing applied.
+It is recommended to keep the collection of possible spacing values low. One reason is to limit decision making for which value to use. A designer should identify if items belong together and then consider using smaller spacing values to signify this. Using the same spacing values between components may often provide the illusion of a design grid just by the common internal spacing applied.
 
 ::: example
 <ex-spacing-values></ex-spacing-values>
 :::
+
+If there’s an abundance of spacing values, it’ll be difficult for a designer to choose which one should be selected; even with available guidance. How do you provide recommend when to use 12px over 16px? Designers should focus on the experience instead of the measuring the gap between elements.
 
 Designers should also consider containers in terms of percentage of the parent instead of how many grid columns are expected. When designing a form for example, instead of describing that the fields should span 6 out of 12 columns, describe that the fields span 50% of the width of the container. It’s important to relate the size of the component to the container instead of the page as that is how a developer will ultimately need to implement it. When the field layout needs to change between desktop (6 out of 12 columns) to tablet (4 out of 8 columns), the ratio is still the same (50%).
 
