@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  text-align: center;
+}
+
+.formula {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1ch;
+  flex-wrap: wrap;
+}
+
+.formula > div :first-child {
+  border-bottom: 1px solid;
+}

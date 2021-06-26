@@ -42,7 +42,13 @@ Another principle, continuity, helps with alignment without requiring a design g
 ---
 
 ## spacing and dimension values
-Consider a button with a 1px border, line height of 16px, and 12px of padding. A precarious question would be, does the border contribute to the outside shape of the button or the inside shape? In other words, is the height of the button 40px (does not include border) or 42px (includes the border). If you have a strict design grid which expects components to be confined into specific lines, you may find that the borders of components will slightly shift all of your alignment by a few pixels. At this point you may consider applying some unpredictable pixel shifts of your own, falling more into dangerous territory just to keep a strict grid in place for users who probably won’t notice the pixel differences.
+Consider a button with a 1px border, line height of 16px, and 12px of padding. A precarious question would be, does the border contribute to the outside shape of the button or the inside shape? In other words, is the height of the button 40px (does not include border) or 42px (includes the border).
+
+::: example
+<ex-border-on-grid show-grid="true"></ex-border-on-grid>
+:::
+
+If you have a strict design grid which expects components to be confined into specific lines, you may find that the borders of components will slightly shift all of your alignment by a few pixels. At this point you may consider applying some unpredictable pixel shifts of your own, falling more into dangerous territory just to keep a strict grid in place for users who probably won’t notice the pixel differences when trying to complete a task.
 
 ::: example
 <ex-border-on-grid></ex-border-on-grid>
@@ -56,6 +62,14 @@ It is recommended to keep the number of possible spacing values low. One reason 
 <ex-spacing-values></ex-spacing-values>
 :::
 
-Designers should also provide containers in terms of percentage of the parent instead of how many grid columns are expected. When designing a form for example, instead of describing that the fields should span 6 out of 12 columns, describe that the fields span 50% of the width of the container. It’s important to relate the size of the component to the container instead of the page as that is how a developer will ultimately need to implement it. When the field layout needs to change between desktop (6 out of 12 columns) to tablet (4 out of 8 columns), the ratio is still the same (50%). There are modern tools developers can use to include the reusable spacing values to assist in the appearance of a design grid without actually corresponding to one.
+Designers should also consider containers in terms of percentage of the parent instead of how many grid columns are expected. When designing a form for example, instead of describing that the fields should span 6 out of 12 columns, describe that the fields span 50% of the width of the container. It’s important to relate the size of the component to the container instead of the page as that is how a developer will ultimately need to implement it. When the field layout needs to change between desktop (6 out of 12 columns) to tablet (4 out of 8 columns), the ratio is still the same (50%).
+
+::: example
+<ex-column-percent></ex-column-percent>
+:::
+
+Some percentages could become ugly (4/12 === 33.333%), however engineers have the ability to compute these calculations in native CSS cleanly as `calc(4/12 * 100%)` so gaps are filled without missing decimal precision.
+
+There are modern tools developers can use to include the reusable spacing values to assist in the appearance of a design grid without actually corresponding to one.
 
 [How might we execute these recommendations?](/for-developers)

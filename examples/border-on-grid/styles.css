@@ -1,6 +1,4 @@
-.border-on-grid {
-  display: flex;
-  height: 100%;
+:host([show-grid="true"]) .border-on-grid {
   background-size: calc(1rem - 1px) calc(1rem - 1px);
   background-position: center;
   background-image:
@@ -8,10 +6,13 @@
     linear-gradient(to bottom, var(--accent) 1px, transparent 1px);
 }
 
-.border-on-grid > div {
+.border-on-grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
+}
+
+.border-on-grid > div {
+  text-align: center;
   flex: 1;
   padding: 3rem .25rem;
 }
@@ -19,11 +20,11 @@
 .button {
   font: inherit;
   background: var(--bkgd);
-  border: 1px dashed;
   margin: 0;
   cursor: pointer;
-  padding: 0 1rem;
-  height: 44px;
   color: inherit;
+  border: 1px dashed;
+  padding: 0 .5rem;
+  height: 40px;
   line-height: 1;
 }
