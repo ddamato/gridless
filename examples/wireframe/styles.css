@@ -25,27 +25,25 @@ header {
 }
 
 img {
-  padding: 1rem 2rem;
+  padding: 1rem;
 }
 
-.nav {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav li:not(:last-child) {
-  margin-right: 1rem;
+span {
+  padding: 1rem;
+  display: block;
+  flex: 0 1 70%;
 }
 
 .dashboard {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
   grid-gap: 1rem;
   flex: 1;
 }
@@ -56,5 +54,6 @@ img {
 
 aside {
   width: 6rem;
+  flex: 1;
 }
 

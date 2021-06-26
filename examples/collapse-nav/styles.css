@@ -16,7 +16,7 @@ input[type="checkbox"] {
 }
 
 nav {
-  --item-width: 12ch;
+  --item-width: 11ch;
   overflow: hidden;
   font-family: sans-serif;
   position: relative;
@@ -34,7 +34,7 @@ ul {
 	margin: 0;
 	padding: 0;
 	display: grid;
-	grid-template-columns: 15ch repeat(auto-fill, var(--item-width));
+	grid-template-columns: 14ch repeat(auto-fill, var(--item-width));
 	grid-auto-flow: dense;
 	top: 0;
 	left: 0;

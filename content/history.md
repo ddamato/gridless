@@ -1,3 +1,13 @@
+## a grid by any other name
+The term "grid" in web design can mean a few different things. For the purposes of the following observations and examples we'll be referring to the grid used for user interface (UI) design to layout a web page or application. Other examples of the word "grid" in web design include:
+
+- The CSS property-value pair `display: grid` used to modify the layout behavior of an element's children.
+- Tables, also known as data grids, which show information in rows and columns.
+- A vector grid used to design fonts, icons, and illustrations used to keep lines from antialiasing when glyphs are resized.
+
+This thesis is only recommending the elimination of the layout grid in web design.
+
+---
 ## a tale as old as design
 The use of a design grid dates back to writing on parchment. Lines would help an author to keep each word, sentence, and paragraph positioned properly in a visually pleasing way. Later, more stylistic designs used a grid to represent content in interesting ways on other print material such as posters, billboards, and flyers. In these examples, the content and the layout are connected together. The content and final layout are both in complete control of the author; they cannot not change based on the person viewing the content because of the nature of print. Once it's printed, it's permanent to that page as intended by the author.
 The introduction of the web was to first make research papers link to each other digitally. Additional methods were added in code to allow for more document customizations. People began to use these tools in unintended ways to achieve different layouts. HTML tables and floating columns became standards of web design layout and a concept of responsive design was on the horizon.
@@ -15,7 +25,7 @@ HTML was designed for writing documents; paragraphs of text with headlines and s
 
 Most applications that designers use to create modern web pages are no better than a digital piece of paper. They do not accurately describe what a web page expects; most specifically in terms of responsive design. So designers are often confined to specific artboard dimensions without the ability to see the in-between sizes or content changes based on language or accessibility preferences. Each design is locked as a single experience and a single grid for alignment. In order to display a new layout, a new artboard is created in the design tool with a grid that fits that artboard. Designers will then duplicate and resize the elements to fit the new artboard's grid. This is not the essence of responsive design, it is actually the same technique used in print for centuries.
 
-The web is different. Content can change based on user preferences and device settings. Engineers craft reusable components that can adapt to their content. No designer can prepare for all the potential layouts. Instead, a seasoned designer should make decisions that inform what the parts of the layout should do if and when certain scenarios occur. The design tools today have difficulty presenting this so it is often up to an engineer to ask the right questions to understand the designer's intent. Here's a small sampling of possible changes that could occur which are often overlooked when crafting an experience.
+The web is different. Content can change based on user preferences and device settings. Engineers craft reusable components that can adapt to their content. No designer can prepare for all potential layouts. Instead, a seasoned designer should make decisions that inform what the parts of the layout should do if and when certain scenarios occur. The design tools today have difficulty presenting this so it is often up to an engineer to ask the right questions to understand the designer's intent. Here's a small sampling of possible changes that could occur which are often overlooked when crafting an experience.
 
 - Text length varying based on language translation
 - Font size varying based on character encoding and accessibility settings

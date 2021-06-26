@@ -106,7 +106,7 @@ header ul a {
 
 main {
   --max-width: 900px;
-  --col-width: 540px;
+  --col-width: 60%;
   --threshold: calc(var(--max-width) - 100px);
   max-width: var(--max-width);
 	margin: auto;
@@ -129,8 +129,8 @@ main > h2 {
 
 main > :not(h2) {
   margin: 0;
-  min-width: var(--col-width);
   max-width: 100%;
+  min-width: var(--col-width);
   width: calc((var(--threshold) - 100%) * 1000);
   margin-left: auto; /* logical property support needed */
 }

@@ -1,4 +1,4 @@
-## pen & paper
+## pencil & paper
 The exercise of wireframing can help loosen the need for a grid. While wireframing is still bound to the size of any one artboard, the lack of precision helps flesh out the important concepts of the general experience without losing focus on other design minutiae. While you could wireframe against a snappy program, it’s often faster to less expensive (both in time and money) to draw on paper. Sending a photo of the drawing for getting quick feedback on the general layout and flow of your designs will result in more concise comments. It might not be as technologically advanced as other methods, but tech can get in the way of communicating the foundational experience to your partners.
 
 ::: example
