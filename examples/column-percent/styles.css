@@ -12,6 +12,17 @@
   flex-wrap: wrap;
 }
 
-.formula > div :first-child {
-  border-bottom: 1px solid;
+.result {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+}
+
+
+span {
+  background: var(--accent);
+  padding: .25em .5em;
+  border-radius: 1em;
+  line-height: 1;
+  font-family: monospace;
 }

@@ -68,7 +68,7 @@ Designers should also consider containers in terms of percentage of the parent i
 <ex-column-percent></ex-column-percent>
 :::
 
-Some percentages could become ugly (4/12 === 33.333%), however engineers have the ability to compute these calculations in native CSS cleanly as `calc(4/12 * 100%)` so gaps are filled without missing decimal precision.
+Some percentages could become ugly (4/12 &asymp; 33.333%), however engineers have the ability to compute these calculations in native CSS cleanly as `calc(4/12 * 100%)` or `calc(100% / 3)` so gaps are filled without missing decimal precision.
 
 There are modern tools developers can use to include the reusable spacing values to assist in the appearance of a design grid without actually corresponding to one.
 
