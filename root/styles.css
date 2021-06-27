@@ -5,7 +5,7 @@
 :root {
   --bkgd: white;
   --frgd: #333;
-  --accent: #ffb000;
+  --accent: #ffce43;
 }
 
 @media (prefers-color-scheme: dark) {
