@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/ddamato/gridless#readme",
   "devDependencies": {
+    "@gerhobbelt/markdown-it-github-headings": "^2.0.0-2",
     "front-matter": "^4.0.2",
     "fs-extra": "^9.0.1",
     "glob-fs": "^0.1.7",
@@ -38,7 +39,6 @@
     "markdown-it": "^11.0.0",
     "markdown-it-container": "^3.0.0",
     "markdown-it-link-attributes": "^3.0.0",
-    "markdown-it-named-headings": "^1.1.0",
     "markdown-it-underline": "^1.0.1",
     "nunjucks": "^3.2.2"
   }

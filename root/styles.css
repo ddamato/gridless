@@ -37,7 +37,23 @@ a {
   color: currentColor;
 }
 
-main a:not([href^="http"]):after {
+main h2 a {
+  text-decoration: none;
+  color: var(--accent);
+  opacity: 0;
+  transition: .218s ease;
+}
+
+main h2 a:before {
+  content:'#';
+  margin-inline-end: .25em;
+}
+
+main h2:hover a {
+  opacity: 1;
+}
+
+main :not(h2) a:not([href^="http"]):after {
   content: '\002192';
   display: inline-block;
   margin-inline-start: 1ch;
