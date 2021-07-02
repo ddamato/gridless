@@ -1,0 +1,8 @@
+*:not(style) {
+  padding: 1em;
+  margin: 1rem;
+  background: var(--accent);
+  border-radius: .25em;
+  line-height: 1;
+  display: block;
+}

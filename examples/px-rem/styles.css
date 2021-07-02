@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  text-align: center;
+}
+
+.formula {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1ch;
+  flex-wrap: wrap;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+}
+
+
+span {
+  background: var(--accent);
+  padding: .25em .5em;
+  border-radius: 1em;
+  line-height: 1;
+  font-family: monospace;
+}

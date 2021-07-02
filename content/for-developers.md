@@ -1,14 +1,35 @@
 ## embrace the space
 
-One of the best ways to achieve an aesthetically pleasing layout is to have a set of reusable spacing variables on a steady scale. The values for these variables should be informed by design but ultimately managed in code. While there are several different units that you can use for spacing, rem units should work best. Using rem units relates the spacing to the font size at the root of the document. So as the user zooms in and out, the spacing will also adjust to relate to that zoom. One of the downsides of rems is the conversion between design applications and code. Since the unit relates to font size, sometimes it’s difficult to completely visualize what the result of this unit will be; especially when the font size is altered from a default 16px. While some techniques recommend adjusting the root font size to make the conversion easier, this can cause unexpected side-effects. If you need to translate pixels into rem, you can use the following calculation.
+One of the best ways to achieve an aesthetically pleasing layout is to have a set of reusable spacing variables on a steady scale. The values for these variables should be informed by design but ultimately managed in code. 
 
-spacing pixels/root font size in pixels * 1rem.
+::: example
+<ex-spacing-values></ex-spacing-values>
+:::
 
-The next best spacing unit to use is pixels, as there is no conversion necessary from design applications to code. A serious detriment is the inability for pixels to adjust with zoom, so as your text size increases due to user preference, the space might not unless using the formula above. Relationships between elements may become tighter. Also, divisions into a reusable scale might be more challenging. 1rem is 16px and 2.5rem is 40px. The divisions tend to be cleaner in rem when the scale is limited. If you’ve decided to have more than a dozen divisions, you may consider pixels instead. One more note; all of the other absolute values in CSS are based off of the pixel (cm, in, etc.), so choosing one of these values will eventually be similar to choosing pixels.
+While there are several different units that you can use for spacing, `rem` units should work best. Using `rem` units relates the spacing to the font size at the root of the document. So as the user zooms in and out, the spacing will also adjust to relate to that zoom. One of the downsides of rems is the conversion between design applications and code. Since the unit relates to font size, sometimes it’s difficult to completely visualize what the result of this unit will be; especially when the font size is altered from a default `16px`. While some techniques recommend adjusting the root font size to make the conversion easier, this can cause unexpected side-effects. If you need to translate `px` into `rem`, you can use the following calculation.
 
-Spacing using ems is more challenging to manage as this unit relates to the current font size of the element. For example default headings will provide a larger size using em units than paragraphs. This could deliver unintended results; spacing could become irregular even if the spacing variables are the same. The em units should only be used to relate to the font size of the elements they are applied with. This goes for all of the units that relate to the current font size (ex, ch, etc.).
+::: example
+<ex-px-rem></ex-px-rem>
+:::
 
-The last unit to cover that you could apply to spacing is percentage which will often give radically different results. A percentage-based margin or padding is based on the parent’s width. The areas where you might use percentage base width are rare but certainly not meant to be reusable values. There is a close relationship with ancestor elements and could be resolved through inheritance. Viewport units (vw, vh, etc) might be slightly more predictable but not as consistent as other approaches described above.
+
+The next best spacing unit to use is pixels, as there is no conversion necessary from design applications to code. A serious detriment is the inability for pixels to adjust with zoom, so as your text size increases due to user preference, the space might not unless using the formula above. Relationships between elements may become tighter. Also, divisions into a reusable scale might be more challenging. `1rem` is `16px` and `2.5rem` is `40px`. The divisions tend to be cleaner in rem when the scale is limited. If you’ve decided to have more than a dozen divisions, you may consider pixels instead. One more note; all of the other absolute values in CSS are based off of the pixel (`cm`, `in`, etc.), so choosing one of these values will eventually be similar to choosing pixels.
+
+Spacing using `em` is more challenging to manage as this unit relates to the current font size of the element. For example default headings will provide a larger size using `em` units than paragraphs. This could deliver unintended results; spacing could become irregular even if the spacing variables are the same.
+
+::: example
+<ex-em-sizing></ex-em-sizing>
+:::
+
+The `em` units should only be used to relate to the font size of the elements they are applied with. This goes for all of the units that relate to the current font size (`ex`, `ch`, etc.).
+
+The last unit to cover that you could apply to spacing is percentage which will often give radically different results. A percentage-based margin or padding is based on **the parent’s width**. The areas where you might use percentage base width are rare but certainly not meant to be reusable spacing values.
+
+::: example
+<ex-percentage-sizing></ex-percentage-sizing>
+:::
+
+Viewport units (`vw`, `vh`, etc) might be slightly more predictable but not as consistent as other approaches described above.
 
 ---
 ## max, min, and margin auto
