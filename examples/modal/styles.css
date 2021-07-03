@@ -1,0 +1,74 @@
+:host {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.backdrop {
+  background-color: var(--accent);
+  opacity: .4;
+  position: absolute;
+  inset: 0;
+}
+
+.dialog {
+  max-width: 300px;
+  min-height: 150px;
+  margin: 3rem auto;
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: .25em;
+  flex: 1;
+  display: flex;
+  background-color: var(--bkgd);
+  position: relative;
+  font-family: monospace;
+  font-size: .875em;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  padding: 1rem 2rem;
+  margin: auto 0 0 auto;
+  background-color: var(--accent);
+  border-radius: .25em;
+  cursor: pointer;
+  position: relative;
+}
+
+:host([display="max-width"]) button,
+:host([display="margin-auto"]) span {
+  display: none;
+}
+
+.dialog:before,
+.dialog:after,
+button:before,
+button:after {
+  content: 'auto';
+  position: absolute;
+  padding: .25rem 1rem;
+}
+
+.dialog:before {
+  right: 100%;
+}
+
+.dialog:after {
+  left: 100%;
+}
+
+button:before {
+  top: 0;
+  right: 100%;
+}
+
+button:after {
+  bottom: 100%;
+  left: 0;
+}

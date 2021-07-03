@@ -34,11 +34,23 @@ Viewport units (`vw`, `vh`, etc) might be slightly more predictable but not as c
 ---
 ## max, min, and margin auto
 
-Often as designers craft experiences and developers code, we become concerned with what happens at smaller screen sizes. We should also consider what happens at larger sizes such as ultrawide monitors. For these layouts, we should consider setting a maximum width that the main container should be constrained in and then justify that container horizontally in an appropriate way; perhaps centered for example. Modals are a common component where this could be executed, ensuring that the content area doesn’t span the entire width of a monitor until in smaller viewports. Some guidance recommends restricting lines of text to less than 80 characters for readability; this is something that could be set using a maximum width.
+Often as designers craft experiences and developers code, we become concerned with what happens at smaller screen sizes. We should also consider what happens at larger sizes such as ultrawide monitors. For these layouts, we should consider setting a maximum width that the main container should be constrained in and then justify that container horizontally in an appropriate way; perhaps centered for example. Modals are a common component where this could be executed, ensuring that the content area doesn’t span the entire width of a monitor until in smaller viewports.
+
+::: example
+<ex-modal display="max-width"></ex-modal>
+:::
+
+Some guidance recommends restricting lines of text to less than 80 characters for readability; this is something that could be set using a maximum width.
 
 Setting a minimum width is often less desirable as this restricts the content that could appear inside of these containers. However, exceptions do exist. Setting a minimum width on a text input could ensure a value is visible no matter the current layout while otherwise stretching to fit.
 
-Often space is used to align and justify elements within containers. A simple method to place elements is to apply an auto margin to one or more sides of a child element. A modal can be centered in its backdrop by setting auto on the left and right margins. A call-to-action button can be pushed to the bottom of a card by setting an auto margin on the top of the element. There is no need to explicitly set an amount of space, the space is driven by the content and relationships between elements with given rules.
+Often space is used to align and justify elements within containers. A simple method to place elements is to apply an auto margin to one or more sides of a child element. A modal can be centered in its backdrop by setting auto on the left and right margins. A call-to-action button can be pushed to the bottom of a card by setting an auto margin on the top of the element.
+
+::: example
+<ex-modal display="margin-auto"></ex-modal>
+:::
+
+There is no need to explicitly set an amount of space, the space is driven by the content and relationships between elements with given rules.
 
 ---
 ## flexbox and beyond
