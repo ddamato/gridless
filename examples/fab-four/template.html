@@ -1,0 +1,23 @@
+<pre>
+.fab-four {
+  <code>--threshold</code>: 600px;
+  <code>--gap</code>: 1rem;
+  <code>--items</code>: 3;
+  <code>--gap-spacing</code>: calc(var(--gap) * (var(--items) - 1));
+  <code>display</code>: flex;
+  <code>flex-flow</code>: row wrap;
+  <code>gap</code>: var(--gap);
+}
+
+.fab-four > * {
+  <code>min-width</code>: calc((100% - var(--gap-spacing)) / var(--items));
+  <code>max-width</code>: 100%;
+  <code>width</code>: calc((var(--threshold) - 100%) * 100000);
+}
+</pre>
+
+<div class="fab-four">
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+</div>

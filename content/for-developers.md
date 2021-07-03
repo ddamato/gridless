@@ -59,21 +59,33 @@ There is no need to explicitly set an amount of space, the space is driven by th
 ---
 ## flexbox and beyond
 
-After many years of hacking together web designs using tables and floats, flexbox was introduced which significantly changed the way we handle layout today. Flexbox gives developers the ability to lay out containers and content with precise alignment. Developers can now place boxes along the bottom, top, or center of a container in a row or column layout.
+After many years of hacking together web designs using tables and floats, [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) was introduced which significantly changed the way we handle layout today. Flexbox gives developers the ability to lay out containers and content with precise alignment. Developers can now place boxes along the bottom, top, or center of a container in a row or column layout.
 
 ::: example
 <ex-display-flex></ex-display-flex>
 :::
 
-The flexbox collection of CSS properties makes the holy grail layout simple, setting the footer at the bottom of the page no matter how much content is provided.
+The flexbox collection of CSS properties makes the [holy grail layout](https://css-tricks.com/the-holy-grail-layout-with-css-grid/) simple, setting the footer at the bottom of the page no matter how much content is provided.
 
 ::: example
 <ex-holy-grail></ex-holy-grail>
 :::
 
-Flexbox is perfect for aligning a row of buttons or links in navigation, each with an even amount of space or by a systematic variable. It’s also helpful for filling an amount of remaining space with a new container, perhaps for allowing a text input to span available room. Anywhere you might lay elements in a single dimension, you should prepare to use flexbox tools.
+Flexbox is perfect for aligning a row of buttons or links in navigation, each with an even amount of space or by a systematic variable.
 
-Soon after the release of flexbox to modern browsers, the grid display value was introduced which aimed to help developers place children in two dimensions along columns and rows. While the concept does work somewhat similarly to the very design grid we aim to dismiss, there are several caveats that are notable.
+::: example
+<ex-collapse-nav></ex-collapse-nav>
+:::
+
+It’s also helpful for filling an amount of remaining space with a new container, perhaps for allowing a text input to span available room.
+
+::: example
+<ex-min-input></ex-min-input>
+:::
+
+Anywhere you might lay elements in a single dimension, you should prepare to use flexbox tools.
+
+Soon after the release of flexbox to modern browsers, the [grid](https://css-tricks.com/snippets/css/complete-guide-grid/) display value was introduced which aimed to help developers place children in two dimensions along columns and rows. While the concept does work somewhat similarly to the very design grid we aim to dismiss, there are several caveats that are notable.
 
 The CSS grid property only affects the direct children of the grid container element. This means that the parameters of the grid cannot inform further descendants in the element tree. This means you cannot span an element over columns or rows of the grid unless it is a direct child of the grid or you somehow reapply the grid lower in the tree. Reapplying the grid may prove difficult if the lower grid only spans a few columns of the upper grid; they simply cannot inform each other.
 
@@ -86,8 +98,12 @@ One of the big questions for average CSS developers is should you use flexbox or
 
 The concepts of responsive design introduced the idea of breakpoints; conditional statements in CSS that allowed adjustments to occur when the page metadata changed. The most common media queries relate to the dimensions of the viewport. This opened up the possibility for one page of content to have different layouts, responding to the viewport size. The problem with this approach is it goes against content-first design. Content should be dictating the layout and layout should adjust to the available space. This means that smaller components of the page need to respond to the size of their closer ancestors. Changing the layout of buttons in a card isn’t because the page size is small, it’s because the card size is small.
 
-While native ways of querying container size in CSS are coming, there are tricks to make some layouts become smarter. One of these tricks exploits negative dimension values against some threshold. There are different names for the technique, Rémi Parmentier calls it the Fab Four technique (2016), Heydon Pickering has called it the Holy Albatross (2019) but the results are the same. You poll the dimension of the parent’s width by percentage, and subtract it from a container breakpoint value and then scale that value significantly so it becomes very large in either a positive or negative direction. Then you set thresholds for a minimum and maximum width so positive values hit the maximum width and negative values hit the minimum width.
+While native ways of [querying container size in CSS](https://css-tricks.com/say-hello-to-css-container-queries/) are coming, there are tricks to make some layouts become smarter. One of these tricks exploits negative dimension values against some threshold. There are different names for the technique, Rémi Parmentier calls it the [Fab Four technique (2016)](https://medium.com/free-code-camp/the-fab-four-technique-to-create-responsive-emails-without-media-queries-baf11fdfa848), Heydon Pickering has called it the [Holy Albatross (2019)](https://heydonworks.com/article/the-flexbox-holy-albatross/) but the results are the same. You poll the dimension of the parent’s width by percentage, and subtract it from a container breakpoint value and then scale that value significantly so it becomes very large in either a positive or negative direction. Then you set thresholds for a minimum and maximum width so positive values hit the maximum width and negative values hit the minimum width.
+
+::: example
+<ex-fab-four></ex-fab-four>
+:::
 
 This solves the common problem of setting items normally in a row to stack when the container is too small.
 
-If this trick doesn’t give you the desired result, you should truly consider all other options before using a breakpoint. Ask, is the component expected to always be related to the page size (headers, modals, etc.)? Then a breakpoint might be acceptable. However, components that are placed deep within the page should not be using breakpoints to inform their layout. JavaScript, specifically the ResizeObserver constructor, can also help poll a particular container’s dimensions and inform other elements. This might be a more scalable solution than setting a media query, although it’ll be running on the call stack with other JavaScript so performance might be an issue for complex applications.
+If this trick doesn’t give you the desired result, you should truly consider all other options before using a breakpoint. Ask, is the component expected to always be related to the page size (headers, modals, etc.)? Then a breakpoint might be acceptable. However, components that are placed deep within the page should not be using breakpoints to inform their layout. JavaScript, specifically the [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) constructor, can also help poll a particular container’s dimensions and inform other elements. This might be a more scalable solution than setting a media query, although it’ll be running on the call stack with other JavaScript so performance might be an issue for complex applications.

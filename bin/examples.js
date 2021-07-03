@@ -39,7 +39,7 @@ function prepareComponents(examples) {
         this.shadowRoot.innerHTML = \`${composeStyles(css)}${html}\`;
       }
     }));`
-  }).join('').replace(/\s{2,}/g, '');
+  }).join('')//.replace(/\s{2,}/g, '');
 }
 
 async function createExamples() {
