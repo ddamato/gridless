@@ -53,10 +53,18 @@ main h2:hover a {
   opacity: 1;
 }
 
-main :not(h2) a:not([href^="http"]):after {
+main :not(h2) a:not([href^="http"]):after,
+main a[href*="donniedamato"]:after  {
   content: '\002192';
   display: inline-block;
   margin-inline-start: 1ch;
+}
+
+main img {
+  max-width: 150px;
+  display: block;
+  margin-top: 10rem;
+  margin-bottom: 1rem;
 }
 
 h1, h2, h3 {

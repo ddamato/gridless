@@ -44,7 +44,7 @@ Another principle, continuity, helps with alignment without requiring a design g
 ---
 
 ## spacing and dimension values
-Consider a button with a 1px border, line height of 16px, and 12px of padding. A precarious question would be, does the border contribute to the outside shape of the button or the inside shape? In other words, is the height of the button 40px (does not include border) or 42px (includes the border).
+Consider a button with a `1px` border, line height of `16px`, and `12px` of padding. A precarious question would be, does the border contribute to the outside shape of the button or the inside shape? In other words, is the height of the button `40px` (does include border) or `42px` (does not include border, adding the additional `1px` border on all sides)?
 
 ::: example
 <ex-border-on-grid show-grid="true"></ex-border-on-grid>
@@ -64,7 +64,7 @@ It is recommended to keep the collection of possible spacing values low. One rea
 <ex-spacing-values></ex-spacing-values>
 :::
 
-If there’s an abundance of spacing values, it’ll be difficult for a designer to choose which one should be selected; even with available guidance. How do you provide recommend when to use 12px over 16px? Designers should focus on the experience instead of the measuring the gap between elements.
+If there’s an abundance of spacing values, it’ll be difficult for a designer to choose which one should be selected; even with available guidance. How do you provide recommend when to use `12px` over `16px`? Designers should focus on the experience instead of the measuring the gap between elements.
 
 Designers should also consider containers in terms of percentage of the parent instead of how many grid columns are expected. When designing a form for example, instead of describing that the fields should span 6 out of 12 columns, describe that the fields span 50% of the width of the container. It’s important to relate the size of the component to the container instead of the page as that is how a developer will ultimately need to implement it. When the field layout needs to change between desktop (6 out of 12 columns) to tablet (4 out of 8 columns), the ratio is still the same (50%).
 

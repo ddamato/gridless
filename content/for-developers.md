@@ -107,3 +107,6 @@ While native ways of [querying container size in CSS](https://css-tricks.com/say
 This solves the common problem of setting items normally in a row to stack when the container is too small.
 
 If this trick doesn’t give you the desired result, you should truly consider all other options before using a breakpoint. Ask, is the component expected to always be related to the page size (headers, modals, etc.)? Then a breakpoint might be acceptable. However, components that are placed deep within the page should not be using breakpoints to inform their layout. JavaScript, specifically the [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) constructor, can also help poll a particular container’s dimensions and inform other elements. This might be a more scalable solution than setting a media query, although it’ll be running on the call stack with other JavaScript so performance might be an issue for complex applications.
+
+[Who wrote all of this?](/about)
+
