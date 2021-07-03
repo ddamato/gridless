@@ -7,7 +7,7 @@
 
 .backdrop {
   background-color: var(--accent);
-  opacity: .4;
+  opacity: .25;
   position: absolute;
   inset: 0;
 }

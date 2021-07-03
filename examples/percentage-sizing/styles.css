@@ -1,11 +1,12 @@
 ul {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  max-width: 450px;
 }
 
 li {
@@ -37,15 +38,15 @@ span:after {
 
 .tall {
   height: 200px;
-  width: 50px;
+  width: 10%;
 }
 
 .average {
   height: 100px;
-  width: 100px;
+  width: 30%;
 }
 
 .long {
   height: 50px;
-  width: 200px;
+  width: 60%;
 }

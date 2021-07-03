@@ -1,0 +1,30 @@
+.input-field {
+  display: flex;
+  gap: 1rem;
+  max-width: 50%;
+  margin: 1rem auto;
+}
+
+input {
+  color: inherit;
+  border: 1px solid;
+  padding: 0 .5rem;
+  border-radius: .25em;
+  margin: 0;
+  background: transparent;
+  flex: 1;
+  min-width: 10ch;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  padding: 1rem 2rem;
+  margin: auto 0 0 auto;
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: .25em;
+  cursor: pointer;
+  position: relative;
+}

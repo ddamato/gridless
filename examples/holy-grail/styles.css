@@ -1,0 +1,31 @@
+main :not(div) {
+  background: var(--accent);
+  border-radius: .25em;
+  padding: 1rem 2rem;
+}
+
+main, div {
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  flex-direction: column;
+  min-height: 40vh;
+}
+
+div {
+  max-height: 10vh;
+}
+
+div, aside {
+  flex: 1;
+}
+
+section {
+  flex: 2;
+}
+
+footer {
+  margin-top: auto;
+}

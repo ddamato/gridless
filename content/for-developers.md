@@ -44,6 +44,10 @@ Some guidance recommends restricting lines of text to less than 80 characters fo
 
 Setting a minimum width is often less desirable as this restricts the content that could appear inside of these containers. However, exceptions do exist. Setting a minimum width on a text input could ensure a value is visible no matter the current layout while otherwise stretching to fit.
 
+::: example
+<ex-min-input></ex-min-input>
+:::
+
 Often space is used to align and justify elements within containers. A simple method to place elements is to apply an auto margin to one or more sides of a child element. A modal can be centered in its backdrop by setting auto on the left and right margins. A call-to-action button can be pushed to the bottom of a card by setting an auto margin on the top of the element.
 
 ::: example
@@ -55,7 +59,17 @@ There is no need to explicitly set an amount of space, the space is driven by th
 ---
 ## flexbox and beyond
 
-After many years of hacking together web designs using tables and floats, flexbox was introduced which significantly changed the way we handle layout today. Flexbox gives developers the ability to lay out containers and content with precise alignment. Developers can now place boxes along the bottom, top, or center of a container in a row or column layout. The flexbox collection of CSS properties makes the holy grail layout simple, setting the footer at the bottom of the page no matter how much content is provided.
+After many years of hacking together web designs using tables and floats, flexbox was introduced which significantly changed the way we handle layout today. Flexbox gives developers the ability to lay out containers and content with precise alignment. Developers can now place boxes along the bottom, top, or center of a container in a row or column layout.
+
+::: example
+<ex-display-flex></ex-display-flex>
+:::
+
+The flexbox collection of CSS properties makes the holy grail layout simple, setting the footer at the bottom of the page no matter how much content is provided.
+
+::: example
+<ex-holy-grail></ex-holy-grail>
+:::
 
 Flexbox is perfect for aligning a row of buttons or links in navigation, each with an even amount of space or by a systematic variable. It’s also helpful for filling an amount of remaining space with a new container, perhaps for allowing a text input to span available room. Anywhere you might lay elements in a single dimension, you should prepare to use flexbox tools.
 
