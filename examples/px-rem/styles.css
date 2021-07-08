@@ -22,7 +22,7 @@
 span {
   background: var(--accent);
   padding: .25em .5em;
-  border-radius: 1em;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   line-height: 1;
   font-family: monospace;
 }

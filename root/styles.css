@@ -177,7 +177,7 @@ main code {
   padding: .25em .5em;
   line-height: 1;
   background: var(--accent);
-  border-radius: 1em;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 
 main blockquote {
