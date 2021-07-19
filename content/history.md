@@ -1,5 +1,5 @@
 ## a grid by any other name
-The term "grid" in web design can mean a few different things. For the purposes of the following observations and examples we'll be referring to the grid used for user interface (UI) design to layout a web page or application. This is commonly referred to as the n-column grid or the n-pixel grid. Other examples of the word "grid" in web design include:
+The term "grid" in web design can mean a few different things. For the purposes of the following observations and examples we'll be referring to the grid used for user interface (UI) design to layout a web page or application. This is commonly known as the n-column grid or the n-pixel grid. Other examples of the word "grid" in web design include:
 
 - The CSS property-value pair `display: grid` used to modify the layout behavior of an element's children.
 - Tables, also known as data grids, which show information in rows and columns.
