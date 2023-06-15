@@ -9,4 +9,4 @@ I think this is why digital designers still expect to use the grid while experie
 I hope this thesis and related examples cause another paradigm shift for designers to rely less on strict columns and consider these techniques for unpredictable content and uncertain dimensions.
 
 ![Donnie D'Amato](donnie.jpeg)
-[Donnie D'Amato, <br/> Design Systems Architect](https://donniedamato.info/)
+[Donnie D'Amato, <br/> Design Systems Architect](https://donnie.damato.design/)
