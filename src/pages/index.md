@@ -1,3 +1,7 @@
+---
+layout: ../layouts/Layout.astro
+---
+
 ## get rid of grid
 > “Blasphemy, I need structure and order!”
 

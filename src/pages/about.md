@@ -1,3 +1,7 @@
+---
+layout: ../layouts/Layout.astro
+---
+
 ## thank you for reading
 
 Starting as an artist, identifying what makes things "look good" is important for gaining acceptance in your work. Many years of experience has given me the understanding of what makes a design grid so helpful for folks who layout elements on a page in an eye-catching or aesthetical-pleasing way. In my transition from physical mediums to digital, this same approach came along for the ride. That is, until responsive design. 
@@ -8,5 +12,5 @@ I think this is why digital designers still expect to use the grid while experie
 
 I hope this thesis and related examples cause another paradigm shift for designers to rely less on strict columns and consider these techniques for unpredictable content and uncertain dimensions.
 
-![Donnie D'Amato](donnie.jpeg)
+![Donnie D'Amato](/donnie.jpeg)
 [Donnie D'Amato, <br/> Design Systems Architect](https://donnie.damato.design/)

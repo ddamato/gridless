@@ -196,8 +196,7 @@ main .example {
   overflow: auto;
 }
 
-main .example > p {
-  display: contents;
+main .example > * {
   direction: ltr;
 }
 

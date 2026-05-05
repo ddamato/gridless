@@ -1,3 +1,7 @@
+---
+layout: ../layouts/Layout.astro
+---
+
 ## a grid by any other name
 The term "grid" in web design can mean a few different things. For the purposes of the following observations and examples we'll be referring to the grid used for user interface (UI) design to layout a web page or application. This is commonly known as the n-column grid or the n-pixel grid. Other examples of the word "grid" in web design include:
 

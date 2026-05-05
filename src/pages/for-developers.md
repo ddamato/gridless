@@ -1,33 +1,29 @@
+---
+layout: ../layouts/Layout.astro
+---
+
 ## embrace the space
 
 One of the best ways to achieve an aesthetically pleasing layout is to have a set of reusable spacing variables on a steady scale. The values for these variables should be informed by design but ultimately managed in code. 
 
-::: example
-<ex-spacing-values></ex-spacing-values>
-:::
+<div class="example"><ex-spacing-values></ex-spacing-values></div>
 
 While there are several different units that you can use for spacing, `rem` units should work best. Using `rem` units relates the spacing to the font size at the root of the document. So as the user zooms in and out, the spacing will also adjust to relate to that zoom. One of the downsides of rems is the conversion between design applications and code. Since the unit relates to font size, sometimes it’s difficult to completely visualize what the result of this unit will be; especially when the font size is altered from a default `16px`. While some techniques recommend adjusting the root font size to make the conversion easier, this can cause unexpected side-effects. If you need to translate `px` into `rem`, you can use the following calculation.
 
-::: example
-<ex-px-rem></ex-px-rem>
-:::
+<div class="example"><ex-px-rem></ex-px-rem></div>
 
 
 The next best spacing unit to use is pixels, as there is no conversion necessary from design applications to code. A serious detriment is the inability for pixels to adjust with zoom, so as your text size increases due to user preference, the space might not unless using the formula above. Relationships between elements may become tighter. Also, divisions into a reusable scale might be more challenging. `1rem` is `16px` and `2.5rem` is `40px`. The divisions tend to be cleaner in rem when the scale is limited. If you’ve decided to have more than a dozen divisions, you may consider pixels instead. One more note; all of the other absolute values in CSS are based off of the pixel (`cm`, `in`, etc.), so choosing one of these values will eventually be similar to choosing pixels.
 
 Spacing using `em` is more challenging to manage as this unit relates to the current font size of the element. For example default headings will provide a larger size using `em` units than paragraphs. This could deliver unintended results; spacing could become irregular even if the spacing variables are the same.
 
-::: example
-<ex-em-sizing></ex-em-sizing>
-:::
+<div class="example"><ex-em-sizing></ex-em-sizing></div>
 
 The `em` units should only be used to relate to the font size of the elements they are applied with. This goes for all of the units that relate to the current font size (`ex`, `ch`, etc.).
 
 The last unit to cover that you could apply to spacing is percentage which will often give radically different results. A percentage-based margin or padding is based on **the parent’s width**. The areas where you might use percentage base width are rare but certainly not meant to be reusable spacing values.
 
-::: example
-<ex-percentage-sizing></ex-percentage-sizing>
-:::
+<div class="example"><ex-percentage-sizing></ex-percentage-sizing></div>
 
 Viewport units (`vw`, `vh`, etc) might be slightly more predictable but not as consistent as other approaches described above.
 
@@ -36,23 +32,17 @@ Viewport units (`vw`, `vh`, etc) might be slightly more predictable but not as c
 
 Often as designers craft experiences and developers code, we become concerned with what happens at smaller screen sizes. We should also consider what happens at larger sizes such as ultrawide monitors. For these layouts, we should consider setting a maximum width that the main container should be constrained in and then justify that container horizontally in an appropriate way; perhaps centered for example. Modals are a common component where this could be executed, ensuring that the content area doesn’t span the entire width of a monitor until in smaller viewports.
 
-::: example
-<ex-modal display="max-width"></ex-modal>
-:::
+<div class="example"><ex-modal display="max-width"></ex-modal></div>
 
 Some guidance recommends restricting lines of text to less than 80 characters for readability; this is something that could be set using a maximum width.
 
 Setting a minimum width is often less desirable as this restricts the content that could appear inside of these containers. However, exceptions do exist. Setting a minimum width on a text input could ensure a value is visible no matter the current layout while otherwise stretching to fit.
 
-::: example
-<ex-min-input></ex-min-input>
-:::
+<div class="example"><ex-min-input></ex-min-input></div>
 
 Often space is used to align and justify elements within containers. A simple method to place elements is to apply an auto margin to one or more sides of a child element. A modal can be centered in its backdrop by setting auto on the left and right margins. A call-to-action button can be pushed to the bottom of a card by setting an auto margin on the top of the element.
 
-::: example
-<ex-modal display="margin-auto"></ex-modal>
-:::
+<div class="example"><ex-modal display="margin-auto"></ex-modal></div>
 
 There is no need to explicitly set an amount of space, the space is driven by the content and relationships between elements with given rules.
 
@@ -61,27 +51,19 @@ There is no need to explicitly set an amount of space, the space is driven by th
 
 After many years of hacking together web designs using tables and floats, [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) was introduced which significantly changed the way we handle layout today. Flexbox gives developers the ability to lay out containers and content with precise alignment. Developers can now place boxes along the bottom, top, or center of a container in a row or column layout.
 
-::: example
-<ex-display-flex></ex-display-flex>
-:::
+<div class="example"><ex-display-flex></ex-display-flex></div>
 
 The flexbox collection of CSS properties makes the [holy grail layout](https://css-tricks.com/the-holy-grail-layout-with-css-grid/) simple, setting the footer at the bottom of the page no matter how much content is provided.
 
-::: example
-<ex-holy-grail></ex-holy-grail>
-:::
+<div class="example"><ex-holy-grail></ex-holy-grail></div>
 
 Flexbox is perfect for aligning a row of buttons or links in navigation, each with an even amount of space or by a systematic variable.
 
-::: example
-<ex-collapse-nav></ex-collapse-nav>
-:::
+<div class="example"><ex-collapse-nav></ex-collapse-nav></div>
 
 It’s also helpful for filling an amount of remaining space with a new container, perhaps for allowing a text input to span available room.
 
-::: example
-<ex-min-input></ex-min-input>
-:::
+<div class="example"><ex-min-input></ex-min-input></div>
 
 Anywhere you might lay elements in a single dimension, you should prepare to use flexbox tools.
 
@@ -100,13 +82,10 @@ The concepts of responsive design introduced the idea of breakpoints; conditiona
 
 While native ways of [querying container size in CSS](https://css-tricks.com/say-hello-to-css-container-queries/) are coming, there are tricks to make some layouts become smarter. One of these tricks exploits negative dimension values against some threshold. There are different names for the technique, Rémi Parmentier calls it the [Fab Four technique (2016)](https://medium.com/free-code-camp/the-fab-four-technique-to-create-responsive-emails-without-media-queries-baf11fdfa848), Heydon Pickering has called it the [Holy Albatross (2019)](https://heydonworks.com/article/the-flexbox-holy-albatross/) but the results are the same. You poll the dimension of the parent’s width by percentage, and subtract it from a container breakpoint value and then scale that value significantly so it becomes very large in either a positive or negative direction. Then you set thresholds for a minimum and maximum width so positive values hit the maximum width and negative values hit the minimum width.
 
-::: example
-<ex-fab-four></ex-fab-four>
-:::
+<div class="example"><ex-fab-four></ex-fab-four></div>
 
 This solves the common problem of setting items normally in a row to stack when the container is too small.
 
 If this trick doesn’t give you the desired result, you should truly consider all other options before using a breakpoint. Ask, is the component expected to always be related to the page size (headers, modals, etc.)? Then a breakpoint might be acceptable. However, components that are placed deep within the page should not be using breakpoints to inform their layout. JavaScript, specifically the [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) constructor, can also help poll a particular container’s dimensions and inform other elements. This might be a more scalable solution than setting a media query, although it’ll be running on the call stack with other JavaScript so performance might be an issue for complex applications.
 
 [Who wrote all of this?](/about)
-

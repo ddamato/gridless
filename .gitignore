@@ -1,7 +1,10 @@
 node_modules
 .env
-_site/
+.env.production
+dist/
 package-lock.json
 .DS_Store
+# Astro
+.astro/
 # Local Netlify folder
 .netlify
