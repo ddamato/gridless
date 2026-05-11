@@ -33,6 +33,10 @@ body {
   background-color: var(--bkgd);
 }
 
+footer {
+  padding: 16px;
+}
+
 a {
   color: currentColor;
 }
